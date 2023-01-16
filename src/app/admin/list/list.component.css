@@ -1,0 +1,37 @@
+h1{
+    color: darkviolet;
+    text-align: center;
+    text-decoration: solid;
+    background-color: cyan;
+}
+ 
+.mat-1{
+ color: antiquewhite;
+ box-sizing: border-box;
+
+}
+.form-group{
+   color: blue;
+   padding: 2px;
+   margin: 10px;
+   text-justify: auto;
+
+}
+input.ng-invalid{
+    border-left: 20px solid red;
+    box-sizing: border-box;
+
+}
+input.ng-valid{
+    border-left: 20px solid green;
+
+}
+.form-check-label{
+    margin: 0px;
+    padding: 15px;
+}
+.btn btn-warning {
+    margin: 2px;
+    padding: 10px;
+
+}

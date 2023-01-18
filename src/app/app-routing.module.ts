@@ -1,7 +1,14 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import {} from './admin/admin.module'
+import { IdComponent } from './id/id.component';
+const routes: Routes = [
+  {
+    path:'id',
+    component:IdComponent
 
-const routes: Routes = [];
+  }
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

@@ -8,12 +8,11 @@ import { StyleDirective } from './style.directive';
 import {FormsModule} from '@angular/forms'
 import {ReactiveFormsModule} from '@angular/forms'
 import {AdminModule} from './admin/admin.module';
-import { IdComponent } from './id/id.component'
 @NgModule({
   declarations: [
     AppComponent,
     StyleDirective,
-    IdComponent,
+    
   ],
   imports: [
     BrowserModule,
@@ -21,7 +20,7 @@ import { IdComponent } from './id/id.component'
     NgbModule,
     FormsModule,
     ReactiveFormsModule,
-    AdminModule
+    AdminModule,
   
   ],
   providers: [],

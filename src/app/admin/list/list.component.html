@@ -11,12 +11,12 @@
                 <!-- Sign In Form -->
                 <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
                   <div class="form-floating mb-3">
-                    <input type="text" class="form-control" id="floatingInput" placeholder="Username" formControlName="email" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.email.errors }"  id="inputEmail4">
+                    <input type="text" class="form-control" id="floatingInput" placeholder="Email" formControlName="email" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.email.errors }"  id="inputEmail4">
                     <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
-                      <div *ngIf="f.email.errors.required">Username is required</div>
-                      <div *ngIf="f.email.errors.email">Username must be a valid email address</div>
+                      <div *ngIf="f.email.errors.required">Email is required</div>
+                      <div *ngIf="f.email.errors.email">Email must be a valid Username</div>
                    </div>
-                    <label for="floatingInput">Username</label>
+                    <label for="floatingInput">Email</label>
                   </div>
                   <div class="form-floating mb-3">
                     <input type="password" class="form-control" id="floatingPassword" placeholder="Password" formControlName="password"[ngClass]="{ 'is-invalid': submitted && f.password.errors }" id="inputPassword4">
@@ -36,7 +36,7 @@
                   <div class="d-grid">
                     <button class="btn btn-lg btn-primary btn-login text-uppercase fw-bold mb-2" type="submit">Sign in</button>
                     <div class="text-center">
-                      <a class="small" href="#">Forgot password?</a>
+                      <a class="small" routerLink="../forget">Forgot password?</a>
                     </div>
                   </div>
   

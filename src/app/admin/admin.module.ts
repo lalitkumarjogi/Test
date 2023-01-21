@@ -3,11 +3,13 @@ import { CommonModule } from '@angular/common';
 
 import { AdminRoutingModule } from './admin-routing.module';
 import { ListComponent } from './list/list.component';
-import {ReactiveFormsModule} from '@angular/forms';
+import {ReactiveFormsModule,FormsModule} from '@angular/forms';
+import { ForgetComponent } from './forget/forget.component';
 
 @NgModule({
   declarations: [
     ListComponent,
+    ForgetComponent,
    
     
   ],
@@ -17,8 +19,10 @@ ListComponent
   imports: [
     CommonModule,
     AdminRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FormsModule
     
+       
   ]
 })
 export class AdminModule { }

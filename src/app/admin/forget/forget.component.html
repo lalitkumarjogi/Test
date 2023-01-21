@@ -1,0 +1,37 @@
+<div class="container-fliud">
+    <div class="row justify-content" style="margin-top: 40px;">
+        <div class="col-8">
+            <div class="jumbotron>">
+                <div class="id" style="margin-left: 50px;">
+            <h1>Welcome</h1>
+            <div>
+                <form [formGroup]="resgisterform"(ngSubmit)=" onSubmit()" >
+                    <div class="form-group">
+                        <label for="usernameInput">User Name</label>
+                        <input formControlName="username" formControls type="text" class="form-control"  id="usernameInput" placeholder="enter the username">
+                        <span style="color: red;" *ngIf="username && username.invalid && username.touched">username Must be valid</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="passwordInput">Password</label>
+                        <input  formControls="password" type="password" class="form-control"  id="passwordInput" placeholder="enter the username">
+                    </div>
+                    <div class="form-group">
+                        <label for="confpasswordInput">Confirm password</label>
+                        <input formControlName="password" type="password" class="form-control" id="cnfpasswordInput" placeholder="enter the username">
+                    </div>
+                    <div class="form-group">
+                        <label for="zipInput">OTP</label>
+                        <input  formControlName="zip" type="text" class="form-control" id="zipcodeinput" placeholder="enter the username">
+                        <span style="color: red;" *ngIf="zip && zip.invalid && zip.touched">zip  code Must be 6 digit</span>
+                    </div>
+                    <button type="submit"class="btn btn-primary" (click)="onSubmit()">Submit</button>
+
+                      <a routerLink="../list" style="margin-left: 90px;">Back to Login Page </a>
+                   
+                </form>
+            </div>
+        </div>
+   </div>
+    </div>
+</div>
+</div>

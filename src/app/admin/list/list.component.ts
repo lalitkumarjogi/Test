@@ -14,7 +14,6 @@ export class ListComponent {
   //Add user form actions
   get f() { return this.registerForm.controls; }
   onSubmit() {
-    
     this.submitted = true;
     // stop here if form is invalid
     if (this.registerForm.invalid) {
@@ -32,6 +31,7 @@ export class ListComponent {
       this.registerForm = this.formBuilder.group({
       email: ['', [Validators.required, Validators.email]],
       password: ['', [Validators.required]]
+      
       });
     }}
 

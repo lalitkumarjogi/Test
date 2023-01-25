@@ -8,22 +8,33 @@ import {FormBuilder,FormControl,FormGroup ,Validators} from '@angular/forms';
 })
 export class ForgetComponent {
 
-  resgisterform=new FormGroup({
-      username:new FormControl('',[Validators.required ,Validators.pattern('[a-zA-Z]+$')]),
-      password:new FormControl('',Validators.required),
-      cnfpassword: new FormControl('',Validators.required),
-      zip: new FormControl('' ,[Validators.required,Validators.minLength(6)])
-  })
+  resgisterform: FormGroup =new FormGroup({})
 
-onSubmit(){
- console.warn(this.resgisterform.value)
-}
-get username(){
-  return this.resgisterform.get('username')
+  constructor(private fb:FormBuilder){
+      this.resgisterform=fb.group({
+ 
+           username:['',[Validators.required]],
+           password:['',[Validators.required]],
+           confirm_password:['',Validators.required],
+           zip:['',Validators.required,Validators.minLength(6)]
+           
 
-}
-get zip(){
-  return this.resgisterform.get('zip')
-}
+      },
 
+      )}
+  
+
+  get username(){
+    return this.resgisterform.get('username')
+  }
+  get zip(){
+    return this.resgisterform.get('zip')
+  }
+  onSubmit(){
+    console.warn(this.resgisterform.value)
+
+  }
+  get f(){
+    return this.resgisterform.controls
+  }
 }

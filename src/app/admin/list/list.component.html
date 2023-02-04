@@ -13,7 +13,7 @@
                   <div class="form-floating mb-3">
                     <input type="text" class="form-control" id="floatingInput" placeholder="Email" formControlName="email" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.email.errors }"  id="inputEmail4">
                     <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
-                      <div *ngIf="f.email.errors.required">Email is required</div>
+                      <div *ngIf="f.email.errors.required ">Email is required</div>
                       <div *ngIf="f.email.errors.email">Email must be a valid Username</div>
                    </div>
                     <label for="floatingInput">Email</label>
@@ -34,7 +34,7 @@
                   </div>
   
                   <div class="d-grid">
-                    <button class="btn btn-lg btn-primary btn-login text-uppercase fw-bold mb-2" type="submit" routerLink="../get" [disabled]="registerForm.invalid">Sign in</button>
+                    <button class="btn btn-lg btn-primary btn-login text-uppercase fw-bold mb-2" type="submit" routerLink="/get">Sign in</button>
                     <div class="text-center">
                       <a class="small" routerLink="../forget">Forgot password?</a>
                     </div>

@@ -5,5 +5,9 @@ import { Injectable } from '@angular/core';
 export class DataService {
 
   constructor() { }
- 
+   get(){
+    return  [
+      {name:'lalit'}
+    ]
+   }
 }

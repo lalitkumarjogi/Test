@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-
+import {DataService} from './data.service'
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -7,5 +7,14 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'blow';
+  test:any
+
+  constructor(private el:DataService){
+    this.test = el.get();
+   console.log(this.el.get())
+  }
+
+  
+
 }
   

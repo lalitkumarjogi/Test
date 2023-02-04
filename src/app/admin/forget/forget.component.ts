@@ -8,18 +8,16 @@ import {FormBuilder,FormControl,FormGroup ,Validators} from '@angular/forms';
 })
 export class ForgetComponent {
 
-  resgisterform: FormGroup =new FormGroup({})
-
-  constructor(private fb:FormBuilder){
+  resgisterform: FormGroup =new FormGroup({})     
+  constructor(private fb:FormBuilder){            
       this.resgisterform=fb.group({
  
            username:['',[Validators.required]],
            password:['',[Validators.required]],
            confirm_password:['',Validators.required],
            zip:['',Validators.required,Validators.minLength(6)]
-           
 
-      },
+      }
 
       )}
   
